@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portafolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Portafolio</strong> by Katya Ivonne Viscarra Portillo</a>
+									<ul class="icons">
+										<li><a href="https://twitter.com/shirohayama" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/shiro.hayama.96/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/shiro_hayama/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/KatyaViscarra" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Componentes En Vue.js</h1>
+                                        <h2>SEMANA 4: DEL 07 DE FEBRERO AL 13 DE FEBRERO</h2>
+									</header>
+
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+                                    <h2>¿Qué es un componente?</h2>
+									<p>Un componente en Vue.js es la forma de reutilizar una instancia de Vue tantas veces como sea necesario. Mediante los componentes podemos crear nuestros propios elementos HTML, cada uno con sus propiedades y métodos particulares que fácilmente podemos reutilizar en toda la aplicación.</p>
+                                                                        
+                                    <p>La sintaxis para crear un componente en Vue es la siguiente: 
+                                        <li>Vue.component("name", { options })</li></p>
+                                    
+                                    <p>En donde name es el nombre del componente y { options } son todas aquellas opciones que podemos enviar a una instancia de Vue con dos pequeñas diferencias las cuales son las siguientes: Ya no es necesario especificar el elemento contexto { el: '#app' } y data ahora es una función que retorna un objeto.</p>
+                                    <p>Vue nos permite anidar componentes de tal forma que podamos colocar un componente dentro de otro. Para hacer esto solo basta con colocar las etiquetas del componente hijo dentro de otro componente.</p>
+
+									<hr class="major" />
+
+									<h2>Buenas prácticas</h2>
+									<p>Al trabajar con componentes es una buena práctica crear la carpeta components donde colocaremos cada uno de nuestros componentes y comenzar el nombre de los componentes con mayúscula.</p>
+                                    <p>Cuando usemos componentes el orden de llamada de nuestros archivos JavaScript en el HTML debe ser primero el JavaScript del CDN de Vue, luego el de los componentes sin importar el orden y por último el del archivo JavaScript que instancia Vue en nuestro proyecto.</p>
+                                    									
+                                    <hr class="major" />
+
+                                    <p>Este tema fue uno de mis favoritos, como tal no hubo complicaciones. Resulto gratificante la conexión entre componentes padre e hijo, y resulta en un entorno más ordenado y ameno; además, las buenas prácticas estudiadas fueron de gran ayuda para evitar errores en el código.</p>
+			
+								</section>
+                                <ul class="actions">
+                                    <li><a href="/bitacora/investigaciones.html" class="button big">Volver</a></li>
+                                </ul>
+						</div>
+					</div>
+
+			<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+							<section id="search" class="alt">
+								<form method="post" action="#">
+									<input type="text" name="query" id="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menú</h2>
+								</header>
+								<ul>
+									<li><a href="/index.html">Inicio</a></li>
+									<li><a href="/introduccion.html">Introducción</a></li>
+									<li><a href="/cartapresentacion.html">Carta de presentación</a></li>
+									<li>
+										<span class="opener">Bitácora de aprendizaje</span>
+										<ul>
+											<li><a href="/bitacora/investigaciones.html">Investigaciones</a></li>
+											<li><a href="/bitacora/laboratorios.html">Laboratorios</a></li>
+											<li><a href="/bitacora/proyectos.html">Proyectos individuales y grupales</a></li>
+											<li><a href="/bitacora/materiales.html">Materiales de apoyo utilizados</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Prácticas desarrolladas</span>
+										<ul>
+											<li><a href="/practicasDesarrolladas/pcomputoI.html">Cómputo I</a></li>
+											<li><a href="/practicasDesarrolladas/pcomputoII.html">Cómputo II</a></li>
+										</ul>
+									</li>
+									<li><a href="/conclusiones.html">Conclusiones</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Programación Computacional IV</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="/progra/asignatura.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										<p>Descripción y contenidos de la asignatura.</p>
+									</article>
+									<article>
+										<a href="/progra/jornalizacion.html" class="image"><img src="images/pic08.jpg" alt="" /></a>
+										<p>Jornalización.</p>
+									</article>
+									<article>
+										<a href="/progra/calendarizacion.html" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Calendarización.</p>
+									</article>
+								</div>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Portafolio. Todos los derechos reservados. Demo: <a href="https://unsplash.com">Unsplash</a>. Diseño: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

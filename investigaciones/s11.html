@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portafolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Portafolio</strong> by Katya Ivonne Viscarra Portillo</a>
+									<ul class="icons">
+										<li><a href="https://twitter.com/shirohayama" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/shiro.hayama.96/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/shiro_hayama/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/KatyaViscarra" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Validación de Datos en Laravel</h1>
+                                        <h2>SEMANA 11: DEL 28 DE MARZO AL 03 DE ABRIL</h2>
+									</header>
+
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+                                    
+									<p>Existen varias formas de validar nuestra aplicación para cubrir aspectos de seguridad como SQL Injection, ataques XSS o CSRF, algunas de ellas son:</p>
+
+                                    <li>Validación de lado del cliente (Javascript y etiquetas HTML).</li>
+                                    <li>Validación de formularios (Request).</li>
+
+									<hr class="major" />
+
+									<h2>Validación de lado del cliente</h2>
+                                    <p>La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.</p>
+                                    <p>Sin embargo, ¡la validación en el lado del cliente no debe considerarse una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario en el lado del servidor, así como también en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor.</p>
+                                    <p>Podemos validar que los campos de un formulario sean requeridos al agregar el atributo required.</p>
+                                    <p>El atributo required es un atributo booleano. Cuando está presente, este especifica que un campo debe ser rellenado antes de ser enviado el contenido del formulario.</p>
+                                    <p>El atributo required trabaja con los siguientes tipos de input:</p>
+
+                                    <li>text</li>
+									<li>search</li>
+                                    <li>url</li>
+                                    <li>tel</li>
+                                    <li>email</li>
+                                    <li>password</li>
+                                    <li>data pickers</li>
+                                    <li>number</li>
+                                    <li>checkbox</li>
+
+                                    <hr class="major" />
+
+									<h2>Validación del lado del servidor (Request)</h2>
+                                    <p>Ve a cualquier sitio web popular que incluya un formulario de registro y observa que proporcionan comentarios cuando no introduces tus datos en el formato que se espera. Recibirás mensajes como:</p>
+                                    
+                                    <li>«Este campo es obligatorio» (No se puede dejar este campo en blanco).</li>
+                                    <li>«Introduzca su número de teléfono en el formato xxx-xxxx» (Se requiere un formato de datos específico para que se considere válido).</li>
+                                    <li>«Introduzca una dirección de correo electrónico válida» (los datos que introdujiste no están en el formato correcto).</li>
+                                    <li>«Su contraseña debe tener entre 8 y 30 caracteres y contener una letra mayúscula, un símbolo y un número». (Se requiere un formato de datos muy específico para tus datos).</li>
+                                    <br>
+                                    <p>Esto se llama validación de formulario. Cuando introduces los datos, el navegador y/o el servidor web verifican que estén en el formato correcto y dentro de las restricciones establecidas por la aplicación. La validación realizada en el navegador se denomina validación en el lado del cliente, mientras que la validación realizada en el servidor se denomina validación en el lado del servidor. En este capítulo nos centraremos en la validación en el lado del cliente.</p>
+                                    <p>Si la información está en el formato correcto, la aplicación permite que los datos se envíen al servidor y (en general) que se guarden en una base de datos; si la información no está en el formato correcto, da al usuario un mensaje de error que explica lo que debe corregir y le permite volver a intentarlo.</p>
+									
+                                    <hr class="major" />
+
+                                    <p>Respecto a validaciones, tenia conocimiento previo de este, por ello, a la hora de desarrollarlo no hubo problemas, lo que si no conocía eran las validaciones mediante plugin, lo cual fue un nuevo reto de aprendizaje.</p>
+
+								</section>
+                                <ul class="actions">
+                                    <li><a href="/bitacora/investigaciones.html" class="button big">Volver</a></li>
+                                </ul>
+						</div>
+					</div>
+
+			<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+							<section id="search" class="alt">
+								<form method="post" action="#">
+									<input type="text" name="query" id="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menú</h2>
+								</header>
+								<ul>
+									<li><a href="/index.html">Inicio</a></li>
+									<li><a href="/introduccion.html">Introducción</a></li>
+									<li><a href="/cartapresentacion.html">Carta de presentación</a></li>
+									<li>
+										<span class="opener">Bitácora de aprendizaje</span>
+										<ul>
+											<li><a href="/bitacora/investigaciones.html">Investigaciones</a></li>
+											<li><a href="/bitacora/laboratorios.html">Laboratorios</a></li>
+											<li><a href="/bitacora/proyectos.html">Proyectos individuales y grupales</a></li>
+											<li><a href="/bitacora/materiales.html">Materiales de apoyo utilizados</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Prácticas desarrolladas</span>
+										<ul>
+											<li><a href="/practicasDesarrolladas/pcomputoI.html">Cómputo I</a></li>
+											<li><a href="/practicasDesarrolladas/pcomputoII.html">Cómputo II</a></li>
+										</ul>
+									</li>
+									<li><a href="/conclusiones.html">Conclusiones</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Programación Computacional IV</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="/progra/asignatura.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										<p>Descripción y contenidos de la asignatura.</p>
+									</article>
+									<article>
+										<a href="/progra/jornalizacion.html" class="image"><img src="images/pic08.jpg" alt="" /></a>
+										<p>Jornalización.</p>
+									</article>
+									<article>
+										<a href="/progra/calendarizacion.html" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Calendarización.</p>
+									</article>
+								</div>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Portafolio. Todos los derechos reservados. Demo: <a href="https://unsplash.com">Unsplash</a>. Diseño: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

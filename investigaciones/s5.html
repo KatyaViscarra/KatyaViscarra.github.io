@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portafolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Portafolio</strong> by Katya Ivonne Viscarra Portillo</a>
+									<ul class="icons">
+										<li><a href="https://twitter.com/shirohayama" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/shiro.hayama.96/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/shiro_hayama/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/KatyaViscarra" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Comunicación <br> Entre Componentes En Vue.js</h1>
+                                        <h2>SEMANA 5: DEL 14 DE FEBRERO AL 20 DE FEBRERO</h2>
+									</header>
+
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+                                    
+									<p>Retomando el tema de los componentes en Vue.js, hablaremos acerca de la comunicación entre estos.</p>
+                                    <p>En Vue.js existen dos tipos principales de comunicación entre componentes:</p>
+                                    
+                                    <li>Comunicación directa padre-hijo, basada en las estrictas relaciones padre-a-hijo e hijo-a-padre.</li>
+                                    <li>Comunicación multicomponente, en la que un componente puede "hablar" con cualquier otro sin importar su relación.</li>                  
+                                   
+									<hr class="major" />
+
+									<h2>Comunicación directa padre-hijo</h2>
+                                    <p>El modelo estándar para la comunicación de componentes, con el que Vue.js es compatible de forma inmediata, es el modelo padre-hijo que se lleva a cabo a través de props y eventos personalizados. En el siguiente diagrama puedes ver una representación visual de la manera en la que se ve este modelo en acción.</p>
+                                    <p>Un padre puede comunicarse solamente con sus hijos directos, y los hijos pueden comunicarse directamente solo con sus padres. En este modelo no es posible la comunicación entre hermanos ni la multicomponente.</p> 
+
+                                    <hr class="major" />
+
+									<h2>Comunicación padre-hijo</h2>
+                                    <p>Supongamos que los componentes que tenemos son parte de un juego. La mayoría de los juegos muestran la puntuación en algún lugar de sus interfaces. Imagina que tenemos una variable score declarada en el componente Parent A, y queremos mostrarla en el componente Child A. ¿Como podemos hacer eso?</p>
+                                    <p>Para enviar datos de un padre a sus hijos Vue.js usa props. Se requieren tres pasos para enviar una propiedad:</p>
+
+                                    <li>Registrar la propiedad en el hijo, de esta manera props: ["score"]</li>
+                                    <li>Usar la propiedad registrada en la plantilla del hijo</li>
+                                    <li>Vincular la propiedad a la variable score (en la plantilla del padre)</li>
+
+                                    <hr class="major" />
+
+									<h2>Comunicación hijo-a-padre</h2>
+                                    <p>Ahora veamos cómo es que los componentes pueden comunicarse en la dirección opuesta. En la comunicación anterior, se desarrolla la mutación de un prop en el hijo, pero ¿qué ocurre si necesitamos usar ese prop en más de un componente hijo? En ese caso necesitaremos mutar el prop desde su fuente en el padre, para que todos los componentes que usen el prop sean actualizados correctamente. Para satisfacer este requisito, Vue presenta los custom events.</p>
+                                    <p>El principio aquí́ es que debemos notificar al padre con el cambio que queramos hacer, el padre hace el cambio, y ese cambio es reflejado a través de prop enviado. Estos son los pasos necesarios para esta operación:</p>
+
+                                    <li>En el hijo, vamos a emitir un evento describiendo el cambio que queramos hacer, de esta forma this.$emit('updatingScore', 200)</li>
+                                    <li>En el padre registramos un detector de eventos para el evento emitido, de esta manera @updatingScore="updateScore"</li>
+                                    <li>Cuando el evento sea emitido, el método asignado actualizará el prop de esta forma this.score = newValue</li>
+                                    									
+                                    <hr class="major" />
+
+									<h2>Comunicación directa padre-hijo</h2>
+                                    <p>El patrón de comunicación padre-hijo rápidamente se vuelve inconveniente y poco práctico a medida que la complejidad de nuestra aplicación aumenta. El problema con el sistema de props-eventos es que funciona directamente y está vinculado estrechamente al árbol de componentes. Los eventos Vue no emergen, a diferencia de los nativos, y es por eso por lo que necesitamos emitirlos repetidamente hasta llegar al objetivo. Como resultado nuestro código se satura con demasiados detectores y emisores de eventos. Por esta razón, en aplicaciones más complejas debemos considerar el uso de un patrón de comunicación multicomponente.</p>
+                                    <p>En este tipo de comunicación de cualquiera-a-cualquiera, cada componente puede enviar y/o recibir datos de cualquier otro componente sin la necesidad de pasos intermedios ni componentes intermediarios.</p>
+                                                                        
+                                    <hr class="major" />
+
+									<p>Al ser una continuación de componentes, no hubo dificultades en la apropiación del tema, lo que si cabe destacar que es un tema algo extenso, con variables técnicas confusas si no se lleva de la mano lo teórico con lo práctico.</p>
+			
+								</section>
+                                <ul class="actions">
+                                    <li><a href="/bitacora/investigaciones.html" class="button big">Volver</a></li>
+                                </ul>
+						</div>
+					</div>
+
+			<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+							<section id="search" class="alt">
+								<form method="post" action="#">
+									<input type="text" name="query" id="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menú</h2>
+								</header>
+								<ul>
+									<li><a href="/index.html">Inicio</a></li>
+									<li><a href="/introduccion.html">Introducción</a></li>
+									<li><a href="/cartapresentacion.html">Carta de presentación</a></li>
+									<li>
+										<span class="opener">Bitácora de aprendizaje</span>
+										<ul>
+											<li><a href="/bitacora/investigaciones.html">Investigaciones</a></li>
+											<li><a href="/bitacora/laboratorios.html">Laboratorios</a></li>
+											<li><a href="/bitacora/proyectos.html">Proyectos individuales y grupales</a></li>
+											<li><a href="/bitacora/materiales.html">Materiales de apoyo utilizados</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Prácticas desarrolladas</span>
+										<ul>
+											<li><a href="/practicasDesarrolladas/pcomputoI.html">Cómputo I</a></li>
+											<li><a href="/practicasDesarrolladas/pcomputoII.html">Cómputo II</a></li>
+										</ul>
+									</li>
+									<li><a href="/conclusiones.html">Conclusiones</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Programación Computacional IV</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="/progra/asignatura.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										<p>Descripción y contenidos de la asignatura.</p>
+									</article>
+									<article>
+										<a href="/progra/jornalizacion.html" class="image"><img src="images/pic08.jpg" alt="" /></a>
+										<p>Jornalización.</p>
+									</article>
+									<article>
+										<a href="/progra/calendarizacion.html" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Calendarización.</p>
+									</article>
+								</div>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Portafolio. Todos los derechos reservados. Demo: <a href="https://unsplash.com">Unsplash</a>. Diseño: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

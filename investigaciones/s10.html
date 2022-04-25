@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portafolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Portafolio</strong> by Katya Ivonne Viscarra Portillo</a>
+									<ul class="icons">
+										<li><a href="https://twitter.com/shirohayama" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/shiro.hayama.96/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/shiro_hayama/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/KatyaViscarra" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Sistema de Rutas y <br> Controladores en Laravel</h1>
+                                        <h2>SEMANA 10: DEL 21 DE MARZO AL 27 DE MARZO</h2>
+									</header>
+
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+                                    <h2>Rutas</h2>
+									<p>Los Routes (o por su defecto, “Rutas” en español) en Laravel son una de las capas más importante en el Framework, debido a que es un sistema de rutas que se encargan de manejar el flujo de solicitudes y respuestas, desde y hacia el cliente (como hacia el navegador, por ejemplo).</p>
+                                    <p>A partir de Laravel 5, todas las rutas se definían en un único archivo llamado routes.php que se encontraba en app/Http. Pero, a partir de Laravel 5.3, los routes tienen su propia carpeta en la raíz del proyecto para llevar una mejor organización, llamada routes/</p>
+                                    <p>A partir de Laravel 5.7, este contiene cuatro archivos de rutas:</p>
+
+                                    <li>routes/api.php: En este archivo se definen todas las rutas de las APIs que puede llegar a tener nuestra aplicación.</li>
+                                    <li>routes/channels.php: Aquí definimos los canales transmisión de eventos. P. e.: cuando realizamos notificaciones en tiempo real.</li>
+                                    <li>routes/console.php:En este definimos comandos de consola que pueden interactuar con el usuario u otro sistema.</li>
+                                    <li>routes/web.php: Aquí definimos todas las rutas de nuestro servidor web que pueden ser ingresadas en la barra del navegador.</li>
+									<br>
+									
+                                    <p>El sistema de rutas de Laravel es muy potente pero a la vez es fácil de comprender y utilizar. El Framework nos brinda distintos tipos de routes para atender cada una de las solicitudes HTTP que recibe nuestra aplicación.</p>
+                                    <p>Solo basta con utilizar la clase Routes con el método que corresponda al verbo HTTP:</p>
+
+                                    <li>get</li>
+                                    <li>post</li>
+                                    <li>put</li>
+                                    <li>patch</li>
+                                    <li>delete</li>
+                                    <li>options</li>
+
+									<hr class="major" />
+
+									<h2>Controladores</h2>
+									<p>Los controladores es el componente donde nos permite agrupar de una mejor manera las peticiones http, es el intermediario entre las vistas y los modelos, se encarga de realizar la lógica del negocio y controles necesarios de las solicitudes que llegan.</p>
+                                    <p>Laravel permite la inyección de dependencias. En el controlador las dependencias son declaradas e inyectadas dentro de un constructor para ser llamadas desde cualquier método de la clase.</p>
+                                                                        
+                                    <hr class="major" />
+
+									<p>Fue un poco difícil apropiarse del tema y comprenderlo, esto mas que todo por el manejo de rutas, en este entorno es algo complicado, pero nada que comprensión y práctica no puedan solucionarlo.</p>
+			
+								</section>
+                                <ul class="actions">
+                                    <li><a href="/bitacora/investigaciones.html" class="button big">Volver</a></li>
+                                </ul>
+						</div>
+					</div>
+
+			<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+							<section id="search" class="alt">
+								<form method="post" action="#">
+									<input type="text" name="query" id="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menú</h2>
+								</header>
+								<ul>
+									<li><a href="/index.html">Inicio</a></li>
+									<li><a href="/introduccion.html">Introducción</a></li>
+									<li><a href="/cartapresentacion.html">Carta de presentación</a></li>
+									<li>
+										<span class="opener">Bitácora de aprendizaje</span>
+										<ul>
+											<li><a href="/bitacora/investigaciones.html">Investigaciones</a></li>
+											<li><a href="/bitacora/laboratorios.html">Laboratorios</a></li>
+											<li><a href="/bitacora/proyectos.html">Proyectos individuales y grupales</a></li>
+											<li><a href="/bitacora/materiales.html">Materiales de apoyo utilizados</a></li>
+										</ul>
+									</li>
+									<li>
+										<span class="opener">Prácticas desarrolladas</span>
+										<ul>
+											<li><a href="/practicasDesarrolladas/pcomputoI.html">Cómputo I</a></li>
+											<li><a href="/practicasDesarrolladas/pcomputoII.html">Cómputo II</a></li>
+										</ul>
+									</li>
+									<li><a href="/conclusiones.html">Conclusiones</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Programación Computacional IV</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="/progra/asignatura.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										<p>Descripción y contenidos de la asignatura.</p>
+									</article>
+									<article>
+										<a href="/progra/jornalizacion.html" class="image"><img src="images/pic08.jpg" alt="" /></a>
+										<p>Jornalización.</p>
+									</article>
+									<article>
+										<a href="/progra/calendarizacion.html" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Calendarización.</p>
+									</article>
+								</div>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Portafolio. Todos los derechos reservados. Demo: <a href="https://unsplash.com">Unsplash</a>. Diseño: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
